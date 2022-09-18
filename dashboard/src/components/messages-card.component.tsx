@@ -8,7 +8,7 @@ import { getDatabase, ref, child, onValue, Database, get } from "firebase/databa
 const useStyles = makeStyles(({ spacing }) => ({
   root: {
     // backgroundColor: '#d6cfcb',
-    backgroundColor: "#F8F0E3",
+    backgroundColor: "#f7f6f5",
     padding: spacing(0, 2, 1, 2),
     borderRadius: '4px',
     maxHeight: '20rem',
@@ -48,20 +48,39 @@ const MessagesComponent: React.FC<Props> = ({ firebaseDb }) => {
   const [messages, setMessages] = useState<Message[]>([])
 
   const testRef = ref(firebaseDb, 'rx_module0/msg');
+  // useEffect(() => {
+  //   get(testRef).then((snapshot) => {
+  //     if (snapshot.exists()) {
+  //       console.log(snapshot.val());
+  //       const data = snapshot.val()
+  //       const newMessages = convertRawDataToMessage(data, messages.length)
+  //       setMessages([...messages, ...newMessages])
+  //     } else {
+  //       console.log("No data available");
+  //     }
+  //   }).catch((error) => {
+  //     console.error(error);
+  //   });
+  // });
   useEffect(() => {
-    get(testRef).then((snapshot) => {
-      if (snapshot.exists()) {
-        console.log(snapshot.val());
-        const data = snapshot.val()
-        const newMessages = convertRawDataToMessage(data, messages.length)
-        setMessages([...messages, ...newMessages])
-      } else {
-        console.log("No data available");
-      }
-    }).catch((error) => {
-      console.error(error);
-    });
-  });
+    const id = setInterval(() => {
+      get(testRef).then((snapshot) => {
+        if (snapshot.exists()) {
+          console.log(snapshot.val());
+          const data = snapshot.val()
+          const newMessages = convertRawDataToMessage(data, messages.length)
+          setMessages([...messages, ...newMessages])
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });
+    }, 250);
+    
+    return () => clearInterval(id);
+  }, []);
+
   // onValue(testRef, (snapshot) => {
   //   const data = snapshot.val();
   //   setMessages(convertTestDataToMessage(data))

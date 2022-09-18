@@ -5,13 +5,13 @@ import ChartComponent from './chart.component'
 const useStyles = makeStyles(({ spacing }) => ({
   root: {
     // backgroundColor: '#d6cfcb',
-    backgroundColor: "#F8F0E3",
+    backgroundColor: "#f7f6f5",
     padding: spacing(4, 6, 6, 6),
     borderRadius: '4px',
   },
   rootTaller: {
     // backgroundColor: '#d6cfcb',
-    backgroundColor: "#F8F0E3",
+    backgroundColor: "#f7f6f5",
     padding: spacing(10, 6, 10, 6),
     borderRadius: '4px',
     height: '4.8em',

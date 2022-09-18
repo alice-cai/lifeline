@@ -4,7 +4,7 @@ import { Box, makeStyles, Typography } from '@material-ui/core'
 const useStyles = makeStyles(({ spacing }) => ({
   header: {
     // backgroundColor: '#d6cfcb',
-    backgroundColor: "#F8F0E3",
+    backgroundColor: "#f7f6f5",
     padding: spacing(4, 6, 6, 6),
     height: '6em',
     borderRadius: '4px',
