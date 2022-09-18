@@ -1,4 +1,5 @@
 
+
 # Lifeline
 
 ## Inspiration
@@ -19,19 +20,15 @@ Lifeline has several main use cases:
 2. Search and Rescue missions
 3. Providing vitals for emergency response individuals to control center personnel when they are out in the field (such as firefighters)
 
-<img width="1423" alt="Screen Shot 2022-09-18 at 4 38 48 AM" src="https://user-images.githubusercontent.com/34670205/190893460-f7c532ac-6595-4951-84d0-92ed2ab4588c.png">
-<img width="1422" alt="Screen Shot 2022-09-18 at 4 38 58 AM" src="https://user-images.githubusercontent.com/34670205/190893464-72418950-e23a-49f3-a081-5d651ef06057.png">
-<img width="1424" alt="Screen Shot 2022-09-18 at 4 39 13 AM" src="https://user-images.githubusercontent.com/34670205/190893465-af3c29c3-7cde-4ff7-9d13-1342cac1a7a7.png">
-
+<img width="1440" alt="Screen Shot 2022-09-18 at 5 06 48 AM" src="https://user-images.githubusercontent.com/34670205/190894552-302fa267-d83e-49eb-8736-6bef85a214a1.png">
+<img width="1440" alt="Screen Shot 2022-09-18 at 5 07 00 AM" src="https://user-images.githubusercontent.com/34670205/190894553-37c4d3bf-0f3d-41a9-ac0d-5dcb8936aad9.png">
+<img width="1440" alt="Screen Shot 2022-09-18 at 5 07 13 AM" src="https://user-images.githubusercontent.com/34670205/190894554-688fc936-1f20-4ee3-a653-176abec671ce.png">
 
 ## How we built it
--The hardware nodes used in Lifeline are all built on the ESP32 microcontroller platform along with a SX1276 LoRa module and IoT wifi module. 
-
--The firmware is written in C.
-
--The database is a real-time Google Firebase.
-
--The dashboard is written in React and styled using Google's Material UI package.
+- The hardware nodes used in Lifeline are all built on the ESP32 microcontroller platform along with a SX1276 LoRa module and IoT wifi module. 
+- The firmware is written in C.
+- The database is a real-time Google Firebase.
+- The dashboard is written in React and styled using Google's Material UI package.
 
 ## Challenges we ran into
 One of the biggest challenges we ran into in this project was integrating so many different technologies together. Whether it was establishing communication between the individual modules, getting data into the right formats, working with new hardware protocols, or debugging the firmware, Lifeline provided our team with an abundance of challenges that we were proud to tackle.
