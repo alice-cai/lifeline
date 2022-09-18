@@ -1,0 +1,93 @@
+$arrowC: #E2DCC2
+$arrowB: #BB7C6F
+$circleHW: 25px 
+
+=direction($dr)
+    content: "#{$dr}"
+    position: absolute
+    color: $arrowB
+    font-size: 1.6em
+
+
+body
+    margin: 0
+    padding: 0
+.app
+    // position: relative
+    // width: 100%
+    // height: 100vh
+    // background-color: #EEECE9
+    display: flex
+    justify-content: center
+    align-items: center
+    .dt-w-e
+        display: flex
+        justify-content: center
+        align-items: center
+        &::before
+            +direction("W")
+            left: 5px
+        &::after
+            +direction("E")
+            right: 5px
+    .dt-n-s
+        display: flex
+        justify-content: center
+        align-items: center
+        &::before
+            +direction("N")
+            top: 5px
+        &::after
+            +direction("S")
+            bottom: 0
+    .arrows
+        position: absolute
+        width: $circleHW
+        height: $circleHW
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        animation: arrows 2s ease infinite alternate
+        transform-origin: center
+        &::before, &::after
+            position: absolute
+            content: ""
+            width: 0
+            height: 0
+        &::before
+            bottom: $circleHW/2
+            border-left: 20px solid transparent
+            border-right: 20px solid transparent
+            border-bottom: 90px solid $arrowB
+        &::after
+            top: $circleHW/2
+            border-left: 20px solid transparent
+            border-right: 20px solid transparent
+            border-top: 90px solid #E2DCC2
+    .compass
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 250px
+        height: 250px
+        border-radius: 50%
+        border: 10px solid $arrowB
+        box-shadow: 0 3px 10px rgba(187,124,111, 0.6)
+        &::before
+            top: -40px
+            position: absolute
+            content: ""
+            width: 20px
+            height: 20px
+            border: 10px solid $arrowB
+            border-radius: 50%
+
+
+@keyframes arrows
+    0%
+        transform: rotate(0)
+    100%
+        transform: rotate(360deg)
+        
