@@ -1,7 +1,8 @@
+
 # Lifeline
 
 ## Inspiration
-One of the biggest roadblocks during disaster relief is reestablishing the first line of communication between community members and emergency response personnel. Whether it is the aftermath of a hurricane devasting a community or searching for individuals in the backcountry, communication is the key to speeding up these relief efforts and ensuring a successful rescue of those at risk. 
+One of the biggest roadblocks during disaster relief is reestablishing the first line of communication between community members and emergency response personnel. Whether it is the aftermath of a hurricane devastating a community or searching for individuals in the backcountry, communication is the key to speeding up these relief efforts and ensuring a successful rescue of those at risk. 
 
 In the event of a hurricane, blizzard, earthquake, or tsunami, cell towers and other communication nodes can be knocked out leaving millions stranded and without a way of communicating with others. In other instances where skiers, hikers, or travelers get lost in the backcountry, emergency personnel have no way of communicating with those who are lost and can only rely on sweeping large areas of land in a short amount of time to be successful in rescuing those in danger. 
 
@@ -17,6 +18,11 @@ Lifeline has several main use cases:
 1. Establishing communication in remote areas, especially after a natural disaster
 2. Search and Rescue missions
 3. Providing vitals for emergency response individuals to control center personnel when they are out in the field (such as firefighters)
+
+<img width="1423" alt="Screen Shot 2022-09-18 at 4 38 48 AM" src="https://user-images.githubusercontent.com/34670205/190893460-f7c532ac-6595-4951-84d0-92ed2ab4588c.png">
+<img width="1422" alt="Screen Shot 2022-09-18 at 4 38 58 AM" src="https://user-images.githubusercontent.com/34670205/190893464-72418950-e23a-49f3-a081-5d651ef06057.png">
+<img width="1424" alt="Screen Shot 2022-09-18 at 4 39 13 AM" src="https://user-images.githubusercontent.com/34670205/190893465-af3c29c3-7cde-4ff7-9d13-1342cac1a7a7.png">
+
 
 ## How we built it
 -The hardware nodes used in Lifeline are all built on the ESP32 microcontroller platform along with a SX1276 LoRa module and IoT wifi module. 
